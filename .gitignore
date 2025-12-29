@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Java
+*.class
+target/
+
+# Logs
+*.log
+logs/
+
+# Screenshots
+screenshots/
+
+# Test Reports
+allure-results/
+allure-report/
+test-output/
+
+# OS
+.DS_Store
+Thumbs.db
