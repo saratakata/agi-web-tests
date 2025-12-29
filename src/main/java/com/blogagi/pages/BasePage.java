@@ -62,8 +62,14 @@ public abstract class BasePage {
 
 
     protected void click(By locator) {
-        logger.info(" click KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
-        driver.findElement(By.cssSelector(".ast-icon > .ahfb-svg-iconset")).click();
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        WebElement element = driver.findElement(By.cssSelector(".ast-search-menu-icon")); // Locate your element
+
+
+        js.executeScript("arguments[0].classList.add('ast-dropdown-active');", element);
+
+
     }
 
     protected void type(By locator, String text) {
